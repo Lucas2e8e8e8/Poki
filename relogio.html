@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form id="loginForm" onsubmit="return validateForm()">
+    <div>
+        <label for="username">Nome:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Entrar</button>
+</form>
+
+<script>
+function validateForm() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Verificar se o nome e senha estão corretos
+    if (username === '1' && password === '1') {
+        // Redirecionar para o link desejado
+        window.location.href = 'https://poki.com/br';
+        return false; // Evitar o envio padrão do formulário
+    } else {
+        alert('Nome ou senha incorretos. Tente novamente.');
+        return false;
+    }
+}
+</script>
+
+</body>
+</html>
